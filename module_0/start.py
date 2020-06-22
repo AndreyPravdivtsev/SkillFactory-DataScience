@@ -11,7 +11,7 @@ Modification:
 """
 
 
-"""all import libraries are here"""
+"""all imported libraries are here"""
 import numpy as np
 """---------------------------------------"""
 
@@ -38,8 +38,10 @@ def score_game(game_core,range_min=1,range_max=100,number_iterations=1000):
     
     return(score)
 
+
 def mean_range(range_min,range_max):
     return (range_max+range_min)//2
+
 
 def game_core_half_range(number,range_min=1,range_max=100):
     """Algorithm to find the number in the given range in a minimum number  of steps:
@@ -47,9 +49,11 @@ def game_core_half_range(number,range_min=1,range_max=100):
         if predict is too small, then our range is from predict+1 to max range value
         if predict is too big, then our new range is from min range value to predict-1
     """
+    
     count = 1    
     predict = mean_range(range_min,range_max)
     max_count = range_max
+    
     while number != predict and count<max_count:
         count+=1
         if number > predict:             
@@ -57,10 +61,9 @@ def game_core_half_range(number,range_min=1,range_max=100):
         elif number < predict: 
             range_max=predict-1 
         predict = mean_range(range_min,range_max)
+        
     return(count)
 
-
-
-
+#here the program starts
 score_game(game_core_half_range,range_min=1,range_max=100,number_iterations=2000)
 
