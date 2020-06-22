@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 This is module_0 project from DST25 SkillFactory
 Task: 
@@ -25,16 +24,16 @@ def score_game(game_core,range_min=1,range_max=100,number_iterations=1000):
     #np.random.seed(2) #To achieve reproducibility, you can uncomment it
     random_array = np.random.randint(range_min,range_max+1, size=number_iterations)
     for number in random_array:
-        count_ls.append(game_core(number,range_min=1,range_max=100))
+        count_ls.append(game_core(number,range_min,range_max))
     
     score = round(np.mean(count_ls),2)
     stdev = round(np.std(count_ls),2)
     max_tries=max(count_ls)
     min_tries=min(count_ls)
     
-    print(f"You script finds out my number in the range [{range_min},{range_max}] in average in {score} tries")
+    print(f"My script finds any number in the range [{range_min},{range_max}] in average in {score} tries")
     print(f"with the standard deviation of {stdev}")
-    print(f"The minimum and maximum number of tries was {min_tries} and {max_tries}")
+    print(f"The minimum and maximum number of tries was min={min_tries} and max={max_tries}")
     print(f"The number of iterations was {number_iterations}")    
     
     return(score)
@@ -50,7 +49,8 @@ def game_core_half_range(number,range_min=1,range_max=100):
     """
     count = 1    
     predict = mean_range(range_min,range_max)
-    while number != predict and count<range_max:
+    max_count = range_max
+    while number != predict and count<max_count:
         count+=1
         if number > predict:             
             range_min=predict+1        
@@ -58,6 +58,8 @@ def game_core_half_range(number,range_min=1,range_max=100):
             range_max=predict-1 
         predict = mean_range(range_min,range_max)
     return(count)
+
+
 
 
 score_game(game_core_half_range,range_min=1,range_max=100,number_iterations=2000)
