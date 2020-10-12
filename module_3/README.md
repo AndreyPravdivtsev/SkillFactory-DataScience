@@ -1,6 +1,6 @@
 # SkillFactory DataScience
  
-## Module_3: Разведывательный анализ данных (Exploratory data analysis) + Feature Engineering (FE) подготовленные для ML. 
+## Module_3: Разведывательный анализ данных (Exploratory data analysis) + Feature Engineering (FE). Готовимся к ML. 
 
 ## Цель: Научиться предобрабатывать, анализировать и генерировать новые данные для предсказания неизвестных параметров используя ML.
 
