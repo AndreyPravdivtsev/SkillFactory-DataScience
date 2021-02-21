@@ -30,7 +30,7 @@
 8. roc_auc, confusion_matrix и public leader board scoring, а также короткое описание изменений написаны в df=results в конце документа. Там видно, что если гиперпараметры не оптимизировать, или оптимизировать для roc_auc, то f1 будет низким, также как и предполагаемая выручка компании. Это происходит из-за большого колличества ложно-отрицательных предсказаний (выдача заведомо дефолтных-кредитов).
 9. Вывод, roc_auc хороший параметр, но f1 лучше отображает потребности компании, а лучше ввести функцию типа profit.
 10. Пробовал разные типы разбиения данных: train_test_split, KFold, StratifiedShuffleSplit, они все показывали похожие на train_test_split метрики. StratifiedShuffleSplit на несколько тысячных улучшить модель. Однако, стандартное отклонение полученное KFold разбиением было около 0.01. Хотя это не так много, но именно на столько отличается мой результат от первого места. 
-11. Лучший результат на Kaggle LeaderBoard от 20210211, 11 место Andrey Pravdivtsev скоринг 0.73832
+11. Лучший результат на Kaggle LeaderBoard от 20210203, 9 место Andrey Pravdivtsev скоринг 0.73850
 
 
 ## Что еще можно было бы сделать?
@@ -46,7 +46,7 @@
 
 1. Kaggle notebook [Andrey Pravdivtsev] Scoring Model, Kaggle никнейм Andrey Pravdivtsev
 
-2. Kaggle LeaderBoard от 20210211, 11 место Andrey Pravdivtsev скоринг 0.73832
+2. Kaggle LeaderBoard от 20210203, 9 место Andrey Pravdivtsev скоринг 0.73850
 
 3. https://github.com/AndreyPravdivtsev/SkillFactory-DataScience/tree/master/module_5
 
