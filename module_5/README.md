@@ -45,6 +45,7 @@
 ## Ответ на задание:
 
 1. Kaggle notebook [Andrey Pravdivtsev] Scoring Model, Kaggle никнейм Andrey Pravdivtsev
+https://www.kaggle.com/andreypravdivtsev/andrey-pravdivtsev-scoring-model
 
 2. Kaggle LeaderBoard от 20210203, 9 место Andrey Pravdivtsev скоринг 0.73850
 
