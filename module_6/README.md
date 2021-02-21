@@ -38,6 +38,7 @@
 ## Ответ на задание:
 
 1. Kaggle notebook Andrey Pavdivtsev [SF-DST Car Price] , Kaggle никнейм Andrey Pravdivtsev
+https://www.kaggle.com/andreypravdivtsev/andrey-pavdivtsev-sf-dst-car-price
 
 2. Kaggle LeaderBoard от 20210221, 15 место Andrey Pravdivtsev скоринг 11.86734
 
