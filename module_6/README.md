@@ -23,7 +23,7 @@
 * Все замены данных traina, используя словари оригинальные и отсутствовали в бейзлайне.
 * Также все замены с регулярными выражениями (впервые сам использовал в полях) также мои.
 * Поэкспериментировал с onehotencoding и слегка оптимизировал параметры градиентного бустинга.
-* Реализовал стекинг для регрессии MAPE: 12.34 % LB 12.01939
+* Реализовал стекинг для регрессии MAPE=12.24%, Public LB=11.70816 15 место на лидерборде
 * Лучший результат: Без стекинга, градиентный бустинг результат на кагле MAPE=12.50%, Public LB=11.86734, 15 место на лидерборде
 
 ## Что еще можно было бы сделать?
@@ -40,7 +40,7 @@
 1. Kaggle notebook Andrey Pavdivtsev [SF-DST Car Price] , Kaggle никнейм Andrey Pravdivtsev
 https://www.kaggle.com/andreypravdivtsev/andrey-pavdivtsev-sf-dst-car-price
 
-2. Kaggle LeaderBoard от 20210221, 15 место Andrey Pravdivtsev скоринг 11.86734
+2. Kaggle LeaderBoard от 20210221, 15 место Andrey Pravdivtsev скоринг 11.70816
 
 3. https://github.com/AndreyPravdivtsev/SkillFactory-DataScience/tree/master/module_6
 
