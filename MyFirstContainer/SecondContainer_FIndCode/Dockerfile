@@ -1,13 +1,7 @@
 FROM mike0sv/sf_docker_base
-WORKDIR /usr/src/app
-
-# ENV DATA_PATH = $PWD/src/output/mytext.txt
-# ENV DATA_PATH = /usr/src/app/output/mytext.txt
-ENV DATA_PATH = /output/mytext.txt
-
-COPY ./src/ .
-CMD [ "python", "./writetxt.py" ]
-
+WORKDIR ./usr/files/
+COPY data.txt ./
+ENV DATA_PATH ./usr/files/data.txt
 
 # to create 
 # sudo docker build -t secret_img .
