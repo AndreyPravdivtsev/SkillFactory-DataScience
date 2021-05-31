@@ -6,7 +6,7 @@ ENV DATA_PATH ./usr/files/data.txt
 # to create 
 # sudo docker build -t secret_img .
 # to start
-# sudo docker run -it --rm -v $PWD/src/output/:/usr/src/app/output  --name secret_img secret_img
+# sudo docker run -it --rm  --name secret_img secret_img
 
 
 
