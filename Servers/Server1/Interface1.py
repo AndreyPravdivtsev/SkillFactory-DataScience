@@ -10,19 +10,26 @@ connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 
 # Создадим очередь, с которой будем работать:
-channel.queue_declare(queue='y_true')
-
 # Опубликуем сообщение
 # exchange определяет, в какую очередь отправляется сообщение. Если мы используем дефолтную точку обмена, то значение можно оставить пустым.
 # параметр routing_key указывает имя очереди, 
 # параметр body тело самого сообщения, 
 
+channel.queue_declare(queue='y_true')
 message = list(y[random_row])
 message_serial = json.dumps(message)
-
 channel.basic_publish(exchange='',
                       routing_key='y_true',
                       body=message_serial)
+
+
+channel.queue_declare(queue='Features')
+message = list(X[random_row])
+message_serial = json.dumps(message)
+channel.basic_publish(exchange='',
+                      routing_key='Features',
+                      body=message_serial)
+
 print('Сообщение с правильным ответом, отправлено в очередь')
 # Закроем подключение 
 connection.close()
