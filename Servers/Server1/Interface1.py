@@ -1,7 +1,8 @@
-import pika
 import numpy as np
 import json
 from sklearn.datasets import load_diabetes
+import pika
+
 X, y = load_diabetes(return_X_y=True)
 random_row = np.random.randint(0, X.shape[0]-1)
 
