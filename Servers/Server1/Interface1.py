@@ -17,7 +17,7 @@ channel = connection.channel()
 # параметр body тело самого сообщения, 
 
 channel.queue_declare(queue='y_true')
-message = list(y[random_row])
+message = list(y)[random_row]
 message_serial = json.dumps(message)
 channel.basic_publish(exchange='',
                       routing_key='y_true',
