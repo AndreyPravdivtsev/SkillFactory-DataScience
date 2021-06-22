@@ -22,7 +22,7 @@ def hello_func():
 def current_time():
     return {'time': datetime.now()}, 200
 
-
+# http://localhost:5000/time?
 
 @app.route("/add",methods=["POST"])
 def add_func():
