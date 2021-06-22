@@ -1,3 +1,33 @@
 pip install uwsgi
 uwsgi --http :5000 --module server:app
 Давайте проверим количество процессов в системе (например, командой htop в Ubuntu):
+
+uwsgi --http :5000 --module server:app --processes 4 --master
+
+
+nginx — это веб-сервер, который оптимизирует нагрузку за счёт асинхронной архитектуры, управляемой событиями. nginx позволяет обрабатывать одновременно до нескольких тысяч запросов, что и делает его самым популярным веб-сервисом в мире.
+
+https://nginx.org/ru/docs/windows.html
+https://nginx.org/ru/docs/install.html
+
+sudo systemctl start nginx 
+sudo systemctl stop nginx 
+sudo systemctl restart nginx
+
+
+uwsgi --socket /tmp/uwsgi.sock --module server:app --master --processes 4
+У nginx есть плагин для uwsgi, поэтому нам нужно всего лишь добавить в его конфигурацию запись о том, куда транслировать запросы к серверу и в каком формате.
+
+Выглядит это вот так:
+
+server {
+    listen 5000;
+    location / {
+        try_files $uri @yourapplication;
+    }
+    location @yourapplication {
+        include uwsgi_params;
+        uwsgi_pass unix:///tmp/uwsgi.sock;
+    }
+}
+Положите эту запись в файл /etc/nginx/myapp.conf и перезапустите nginx
