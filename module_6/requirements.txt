@@ -493,7 +493,7 @@ pyfasttext==0.4.6
 pyflakes==2.1.1
 pyglet==1.5.0
 Pygments==2.7.4
-PyJWT==1.7.1
+PyJWT==2.4.0
 pykalman==0.9.5
 pykdtree @ file:///home/conda/feedstock_root/build_artifacts/pykdtree_1602528433441/work
 pyLDAvis==2.1.2
