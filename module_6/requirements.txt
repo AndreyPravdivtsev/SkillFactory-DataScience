@@ -687,7 +687,7 @@ typeguard==2.10.0
 typing==3.7.4.3
 typing-extensions==3.7.4.1
 tzlocal==2.1
-ujson==1.35
+ujson==5.4.0
 umap-learn==0.4.6
 unicodecsv==0.14.1
 Unidecode==1.1.1
